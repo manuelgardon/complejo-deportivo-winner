@@ -14,72 +14,74 @@ html, body, h1, h2, p, ul, li {
     }
 }
 
-h1 {
+/* Estilos generales para títulos */
+h1, h2 {
     color: #efe3f1;
     text-align: center;
     padding: 20px 0;
-    animation: bounce 2s infinite; /* Animación del título */
+    animation: bounce 2s infinite; 
 }
-h2 {
-    color: #efe3f1;
-    text-align: center; /* Centrar el texto */
-    padding: 20px 0;
-    animation: bounce 2s infinite;
-}
+
+/* Estilos generales para párrafos */
 p {
     color: #666;
 }
 
+/* Estilos generales para imágenes */
 img {
     max-width: 100%;
 }
 
 /* Estilos para el menú de navegación */
 .navbar {
-    position: sticky;
-    top: 0;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    display: flex; /* Agregamos Flexbox para centrar horizontalmente */
-    justify-content: center; /* Centramos los elementos horizontalmente */
-    z-index: 1000;
+    background-color: #3498db; 
+    position: sticky; 
+    top: 0; 
+    z-index: 100; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 20px; 
 }
 
-nav ul li {
-    display: inline;
-    margin-left: 20px;
+/* Estilos para enlaces en el menú de navegación */
+nav a {
+    text-decoration: none;
+    color: #7f718a;
+    font-weight: bold;
+    transition: color 0.3s ease; 
+    font-family: 'Nunito', sans-serif; 
 }
 
 nav a:hover {
-    background-color: #bbe6ee; /* Cambia el color de fondo al pasar el cursor */
-    color: #fff;
+    color: #1f0b33; 
 }
-nav a {
-    text-decoration: none;
-    color: #fff; /* Color del texto común */
-    font-weight: bold;
-    font-size: 18px; /* Tamaño de fuente más grande */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+/* Estilos para los logos en la barra de menú */
+.navbar-contact {
+    display: flex; 
+    gap: 10px; 
+}
+
+.contact-icon {
+    width: 30px; 
+    height: 30px;
 }
 
 /* Estilos para botones */
 .btn-primary {
     background-color: #3498db;
     border-color: #3498db;
-    transition: transform 0.2s ease; /* Transición de transformación suave */
+    transition: transform 0.2s ease; 
 }
 
 .btn-primary:hover {
-    transform: scale(1.05); /* Aumento de tamaño al pasar el cursor */
+    transform: scale(1.05); 
 }
 
-
-
-/* Estilos para el cuerpo de la página */
+/* Estilos generales para el cuerpo de la página */
 body {
-    background-color: #000000f5;
+    background-color: #080211;
     color: #efe3f1;
     line-height: 1.6;
     font-size: 1rem;
@@ -89,30 +91,43 @@ body {
 
 /* Estilos para el encabezado */
 header {
-    background-color: #222;
-    color: #fffeff;
     text-align: center;
-    padding: 20px 0;
+    position: relative;
+}
+
+header img {
+    width: 100%;
+    height: auto;
 }
 
 header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
     font-size: 2.5em;
+    z-index: 1;
 }
 
+/* Ajustar la altura del header al banner */
+header {
+    height: auto; 
+}
 
-
-/* Estilos para las secciones */
+/* Estilos generales para las secciones */
 section {
     background-color: #03264e;
     border: 1px solid #034078;
-    margin: 20px auto; /* Centrar horizontalmente y agregar espacio vertical */
-    padding: 20px; /* Espaciado interno */
+    margin: 20px auto; 
+    padding: 20px; 
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centrar el contenido dentro de la sección */
-    max-width: 800px; /* Ancho máximo para cada sección */
+    text-align: center; 
+    max-width: 800px; 
 }
 
+/* Estilos para títulos de secciones */
 section h2 {
     color: #efe3f1;
     font-size: 1.5em;
@@ -121,97 +136,128 @@ section h2 {
 
 /* Estilos para los párrafos dentro de las secciones */
 section p {
-    color: #666;
-    margin-bottom: 10px; /* Espacio inferior entre párrafos */
+    color: #bebbbb;
+    margin-bottom: 10px; 
 }
 
 /* Estilos para las listas dentro de las secciones */
 section ul {
-    text-align: left; /* Alinear el texto de las listas a la izquierda */
-    margin-left: 20px; /* Agregar margen a la izquierda para las listas */
+    text-align: left; 
+    margin-left: 20px; 
 }
 
-/* Imagen para la sección Bienvenidos a Winer */
+/* Estilos para imágenes en la sección "Bienvenidos a Winer" */
 #inicio {
-    background-image: url('../utils/imagen-fondo.jpg'); 
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda la sección */
-    background-position: center; /* Centra la imagen */
-    text-align: center; /* Alinea el contenido al centro */
-    padding: 80px 0; 
+    background-image: url('./static/imagenes/edificio.jpg');
+    background-size: 100% 100%; 
+    background-position: center;
+    text-align: center;
+    padding: 80px 0;
+    overflow: hidden;
+    position: relative;
+    height: 100vh; 
 }
 
 #inicio h2,
 #inicio p {
-    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo semitransparente (negro con 50% de opacidad) */
+    background-color: rgba(10, 14, 54, 0.575); 
     color: #fff; 
-    padding: 10px 20px; /* Espaciado interno para la caja de texto */
-    border-radius: 10px; /* Bordes redondeados para la caja de texto */
-    display: inline-block; /* Para que la caja de texto se ajuste al contenido */
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    display: inline-block; 
 }
 
-/* Imagen en la sección de "Instalaciones de Vanguardia" */
+/* Estilos para imágenes en la sección "Instalaciones de Vanguardia" */
 #instalaciones img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Añade esta línea */
-    border-radius: 10px;
+    max-width: 100%;
+    border-radius: 10px; 
     display: block;
     margin: 0 auto;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease; 
 }
 
 #instalaciones img:hover {
     opacity: 0.8; 
 }
 
+#instalaciones h2,
+#instalaciones p {
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #fff; 
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    display: inline-block; 
+}
+
+/* Estilos para imágenes en la sección Programas y eventos especiales */
+#eventos img {
+    max-width: 100%;
+    border-radius: 10px; 
+    display: block;
+    margin: 0 auto;
+    transition: opacity 0.3s ease; 
+}
+
+#eventos img:hover {
+    opacity: 0.8; 
+}
+
+#eventos h2,
+#eventos p {
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #fff; 
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    display: inline-block; 
+}
+
+/* Estilos para imágenes en la sección Compromiso con la comunidad */
+#compromiso-comunidad img {
+    max-width: 100%;
+    border-radius: 10px; 
+    display: block;
+    margin: 0 auto;
+    transition: opacity 0.3s ease; 
+}
+
+#compromiso-comunidad img:hover {
+    opacity: 0.8; 
+}
+
+#compromiso-comunidad h2,
+#compromiso-comunidad p {
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #fff; 
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    display: inline-block; 
+}
+
+/* Estilos para imágenes en la sección Espacio para todos */
+#espacio-para-todos img {
+    max-width: 100%;
+    border-radius: 10px; 
+    display: block;
+    margin: 0 auto;
+    transition: opacity 0.3s ease; 
+}
+
+#espacio-para-todos img:hover {
+    opacity: 0.8; 
+}
+
+#espacio-para-todos h2,
+#espacio-para-todos p {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff; 
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    display: inline-block; 
+}
 
 /* Estilos para los elementos de lista en las secciones */
 section ul li {
     margin-bottom: 10px; 
-}
-
-/* Estilos para la sección "Programas y Eventos Especiales" */
-#eventos {
-    text-align: center; /* Alinea el contenido al centro */
-}
-
-/* Estilos para la sección "Programas y Eventos Especiales" */
-#eventos {
-    text-align: center; /* Alinea el contenido al centro */
-}
-
-/* Estilos para el contenedor de imágenes */
-.imagen-container {
-    display: flex; /* Utiliza Flexbox */
-    flex-direction: column; /* Coloca elementos en columnas */
-    align-items: center; /* Centra verticalmente las imágenes */
-    margin: 20px; /* Espacio entre las imágenes */
-    
-}
-
-.imagen-container img {
-    width: 350px; /* Cambia el ancho según tus preferencias */
-    height: auto;
-    max-width: 100%; 
-    border-radius: 10px; /* Bordes redondos */
-}
-
-/* Estilos para la sección "Compromiso con la Comunidad" */
-.fondo-comunidad {
-    background-image: url('../utils/images.jpg');
-    background-size: cover; /* Ajustar la imagen al tamaño de la sección */
-    background-position: center; /* Centrar la imagen */
-    color: #fff; /* Cambia el color del texto según sea necesario para que sea legible en la imagen */
-    padding: 80px 0; 
-    text-align: center; /* Alinea el contenido al centro */
-}
-#compromiso-comunidad h2,
-#compromiso-comunidad p {
-    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo semitransparente (negro con 50% de opacidad) */
-    color: #fff; 
-    padding: 10px 20px; /* Espaciado interno para la caja de texto */
-    border-radius: 10px; /* Bordes redondeados para la caja de texto */
-    display: inline-block; /* Para que la caja de texto se ajuste al contenido */
 }
 
 /* Estilos para el pie de página */
@@ -219,17 +265,16 @@ footer {
     background-color: #222;
     color: #babb86;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Estilos para formularios */
 form {
     max-width: 500px;
     margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: 20px; /* Agrega margen inferior entre elementos del formulario */
 }
 
 /* Estilos para el texto en las secciones */
@@ -241,30 +286,6 @@ section {
 section p {
     margin-bottom: 20px; 
 }
-/* Estilos para el pie de página */
-footer {
-    background-color: #222;
-    color: #babb86;
-    text-align: right; /* Alinea el contenido a la derecha */
-    padding: 10px 20px; /* Ajusta el espaciado interno según sea necesario */
-    display: flex; /* Usa Flexbox para alinear elementos */
-    justify-content: space-between; /* Espacio entre los elementos dentro del footer */
-    align-items: center; /* Centra verticalmente los elementos */
-}
-
-.ubicacion-btn {
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.ubicacion-btn:hover {
-    background-color: #2586c6;
-}
-
 
 /* Adaptación de página para Tablet */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
