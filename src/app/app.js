@@ -33,7 +33,10 @@ function validarFormulario() {
     }
 
     // Si todos los campos son válidos, muestra un mensaje de éxito
-    mostrarMensajes("¡Registro exitoso!", true);
+    mostrarMensajes(["¡Registro exitoso!"], true);
+    document.getElementById("nombre-afiliado").value = "";
+    document.getElementById("email-afiliado").value = "";
+    document.getElementById("contrasena").value = "";
     return false; // Evitar la recarga de la página
 }
 
