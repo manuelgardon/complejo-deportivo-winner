@@ -1,0 +1,296 @@
+/* Reset de estilos para eliminar márgenes y rellenos predeterminados */
+html, body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Animación para el título */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Estilos generales para títulos */
+h1, h2 {
+    color: #efe3f1;
+    text-align: center;
+    padding: 20px 0;
+    animation: bounce 2s infinite; 
+}
+
+/* Estilos generales para párrafos */
+p {
+    color: #666;
+}
+
+/* Estilos generales para imágenes */
+img {
+    max-width: 100%;
+}
+
+/* Estilos para el menú de navegación */
+.navbar {
+    background-color: #3498db; 
+    position: sticky; 
+    top: 0; 
+    z-index: 100; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 20px; 
+}
+
+/* Estilos para enlaces en el menú de navegación */
+nav a {
+    text-decoration: none;
+    color: #7f718a;
+    font-weight: bold;
+    transition: color 0.3s ease; 
+    font-family: 'Nunito', sans-serif; 
+}
+
+nav a:hover {
+    color: #1f0b33; 
+}
+
+/* Estilos para los logos en la barra de menú */
+.navbar-contact {
+    display: flex; 
+    gap: 10px; 
+}
+
+.contact-icon {
+    width: 30px; 
+    height: 30px;
+}
+
+/* Estilos para botones */
+.btn-primary {
+    background-color: #3498db;
+    border-color: #3498db;
+    transition: transform 0.2s ease; 
+}
+
+.btn-primary:hover {
+    transform: scale(1.05); 
+}
+
+/* Estilos generales para el cuerpo de la página */
+body {
+    background-color: #080211;
+    color: #efe3f1;
+    line-height: 1.6;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0;
+}
+
+/* Estilos para el encabezado */
+header {
+    text-align: center;
+    position: relative;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+}
+
+header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 2.5em;
+    z-index: 1;
+}
+
+/* Estilos generales para las secciones */
+section {
+    background-color: #03264e;
+    border: 1px solid #034078;
+    margin: 20px auto; 
+    padding: 20px; 
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+    max-width: 800px; 
+}
+
+/* Estilos para títulos de secciones */
+section h2 {
+    color: #efe3f1;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Estilos para los párrafos dentro de las secciones */
+section p {
+    color: #bebbbb;
+    margin-bottom: 10px; 
+}
+
+/* Estilos para las listas dentro de las secciones */
+section ul {
+    text-align: left; 
+    margin-left: 20px; 
+}
+
+/* Estilos para imágenes en la sección "Bienvenidos a Winer" */
+#inicio {
+    background-image: url('../utils/edificio.jpg');
+    background-size: 100% 100%; 
+    background-position: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    height: 100vh; 
+}
+
+#inicio h2,
+#inicio p {
+    background-color: rgba(10, 14, 54, 0.575); 
+    color: #fff; 
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    display: inline-block; 
+}
+
+/* Estilos para imágenes en la sección "Instalaciones de Vanguardia" */
+#instalaciones img {
+    max-width: 100%;
+    border-radius: 10px; 
+    display: block;
+    margin: 0 auto;
+    transition: opacity 0.3s ease; 
+}
+
+#instalaciones img:hover {
+    opacity: 0.8; 
+}
+
+#instalaciones h2,
+#instalaciones p {
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #fff; 
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    display: inline-block; 
+}
+
+/* Estilos para imágenes en la sección Programas y eventos especiales */
+#eventos img {
+    max-width: 100%;
+    border-radius: 10px; 
+    display: block;
+    margin: 0 auto;
+    transition: opacity 0.3s ease; 
+}
+
+#eventos img:hover {
+    opacity: 0.8; 
+}
+
+#eventos h2,
+#eventos p {
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #fff; 
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    display: inline-block; 
+}
+
+/* Estilos para imágenes en la sección Compromiso con la comunidad */
+#compromiso-comunidad img {
+    max-width: 100%;
+    border-radius: 10px; 
+    display: block;
+    margin: 0 auto;
+    transition: opacity 0.3s ease; 
+}
+
+#compromiso-comunidad img:hover {
+    opacity: 0.8; 
+}
+
+#compromiso-comunidad h2,
+#compromiso-comunidad p {
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #fff; 
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    display: inline-block; 
+}
+
+/* Estilos para imágenes en la sección Espacio para todos */
+#espacio-para-todos img {
+    max-width: 100%;
+    border-radius: 10px; 
+    display: block;
+    margin: 0 auto;
+    transition: opacity 0.3s ease; 
+}
+
+#espacio-para-todos img:hover {
+    opacity: 0.8; 
+}
+
+#espacio-para-todos h2,
+#espacio-para-todos p {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff; 
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    display: inline-block; 
+}
+
+/* Estilos para los elementos de lista en las secciones */
+section ul li {
+    margin-bottom: 10px; 
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #222;
+    color: #babb86;
+    text-align: center;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para formularios */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Estilos para el texto en las secciones */
+section {
+    padding: 40px;
+    line-height: 1.6; 
+}
+
+section p {
+    margin-bottom: 20px; 
+}
+
+/* Adaptación de página para Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    h2 {
+        font-size: 4vw;
+    }
+}
+
+/* Adaptación de página para Smartphone */
+@media screen and (max-width: 767px) {
+    h2 {
+        font-size: 3vw;
+    }
+}
