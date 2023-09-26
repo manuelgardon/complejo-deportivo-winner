@@ -110,11 +110,6 @@ header h1 {
     z-index: 1;
 }
 
-/* Ajustar la altura del header al banner */
-header {
-    height: auto; 
-}
-
 /* Estilos generales para las secciones */
 section {
     background-color: #03264e;
@@ -148,11 +143,10 @@ section ul {
 
 /* Estilos para imágenes en la sección "Bienvenidos a Winer" */
 #inicio {
-    background-image: url('./static/imagenes/edificio.jpg');
+    background-image: url('../utils/edificio.jpg');
     background-size: 100% 100%; 
     background-position: center;
     text-align: center;
-    padding: 80px 0;
     overflow: hidden;
     position: relative;
     height: 100vh; 
